@@ -2,7 +2,7 @@
 <Grid xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
       xmlns:local="clr-namespace:PrismApp1.CoreApp.ViewModels"
-      RowDefinitions="Auto,Auto,Auto,*"
+      RowDefinitions="Auto,*,Auto"
       ColumnDefinitions="Auto,*"
       Padding="15,10"
       ColumnSpacing="10"
@@ -54,13 +54,12 @@
          Grid.ColumnSpan="2"
          HorizontalOptions="Start"
          Margin="5,20">
-    <Label Text="{Binding Influencer.Bio}"
-           LineBreakMode="WordWrap"
-           HorizontalTextAlignment="Start"/>
+    <Label Text="{Binding Influencer.Bio}" />
   </Frame>
 
   <StackLayout HorizontalOptions="Center"
                Orientation="Horizontal"
+               Margin="0,20"
                Grid.Row="2"
                Grid.ColumnSpan="2">
     <Button Text="GitHub"
@@ -71,10 +70,4 @@
             Command="{Binding OpenTwitterCommand}"
             Style="{DynamicResource LinkButton}" />
   </StackLayout>
-
-  <!--<Label Text="{Binding Influencer.Bio}"
-         Grid.Row="1"
-         Grid.ColumnSpan="2"
-         SemanticProperties.Description="Details about the Maui Influencer"
-         Margin="15,0"/>-->
 </Grid>
