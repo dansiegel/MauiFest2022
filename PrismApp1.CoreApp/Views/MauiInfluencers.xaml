@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CollectionView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:model="clr-namespace:PrismApp1.CoreApp.Models"
+                ItemsSource="{Binding Influencers}"
+                x:Name="view"
+                x:Class="PrismApp1.CoreApp.Views.MauiInfluencers">
+  <CollectionView.Resources>
+    <ResourceDictionary>
+      <Style TargetType="Image">
+        <Setter Property="HeightRequest" Value="60" />
+        <Setter Property="WidthRequest" Value="60" />
+        <Setter Property="Margin" Value="10,0" />
+      </Style>
+    </ResourceDictionary>
+  </CollectionView.Resources>
+  <CollectionView.ItemTemplate>
+    <DataTemplate>
+      <Grid x:DataType="model:MauiInfluencer"
+            Padding="10"
+            RowDefinitions="Auto,*"
+            ColumnDefinitions="Auto,*">
+        <Grid.GestureRecognizers>
+          <TapGestureRecognizer Command="{Binding BindingContext.InfluencerSelectedCommand,Source={x:Reference view}}"
+                                CommandParameter="{Binding .}" />
+        </Grid.GestureRecognizers>
+        <Image Grid.RowSpan="2" Source="{Binding Avatar}" Aspect="AspectFill" />
+        <Label Grid.Column="1" Text="{Binding Name}" StyleClass="mainPageTitle" />
+        <Image Source="microsoft.png"
+               HeightRequest="25"
+               WidthRequest="25"
+               HorizontalOptions="Start"
+               IsVisible="{Binding Microsoft}"
+               Grid.Row="1"
+               Grid.Column="1" />
+        <Image Source="mvp.png"
+               HeightRequest="25"
+               WidthRequest="62"
+               HorizontalOptions="Start"
+               IsVisible="{Binding Mvp}"
+               Grid.Row="1"
+               Grid.Column="1" />
+      </Grid>
+    </DataTemplate>
+  </CollectionView.ItemTemplate>
+</CollectionView>

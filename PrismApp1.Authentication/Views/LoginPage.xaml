@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:app="clr-namespace:PrismApp1.Authentication.Animations"
+             x:Class="PrismApp1.Authentication.Views.LoginPage"
+             Title="LoginPage">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <Shadow x:Key="ButtonShadow" Opacity="0.9" Offset="20,20" Radius="20" Brush="Black" />
+      <Style TargetType="Button">
+        <Setter Property="Shadow" Value="{StaticResource ButtonShadow}" />
+        <Setter Property="BackgroundColor" Value="{DynamicResource White}" />
+        <Setter Property="TextColor" Value="{DynamicResource Black}" />
+        <Setter Property="HeightRequest" Value="65" />
+        <Setter Property="Margin" Value="10" />
+      </Style>
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid RowDefinitions="*,Auto,*">
+    <Image Source="prism.png"
+           HorizontalOptions="Center"
+           MaximumWidthRequest="150"
+           Margin="20, 15"
+           VerticalOptions="End" />
+    <Frame CornerRadius="15"
+           HasShadow="True"
+           Margin="20,0"
+           MaximumWidthRequest="{OnPlatform 400,WinUI=550}"
+           HorizontalOptions="Fill"
+           VerticalOptions="Center"
+           BackgroundColor="White"
+           Grid.Row="1">
+      <StackLayout Margin="0,10">
+
+        <Button ImageSource="microsoft.png" VerticalOptions="Center"
+                Text="Personal, Company, School"
+                Command="{Binding LoginCommand}"
+                CommandParameter="microsoft" />
+
+        <Button ImageSource="google.png" VerticalOptions="Center"
+                Text="Sign in with Google"
+                Command="{Binding LoginCommand}"
+                CommandParameter="google" />
+
+        <Button ImageSource="apple.png" VerticalOptions="Center"
+                Text="Sign in with Apple"
+                Command="{Binding LoginCommand}"
+                CommandParameter="apple"
+                IsVisible="{OnPlatform Default=false,iOS=true,MacCatalyst=true}" />
+
+      </StackLayout>
+    </Frame>
+  </Grid>
+</ContentPage>

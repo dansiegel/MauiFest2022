@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UseMaui>true</UseMaui>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Prism.Maui" Version="8.1.212-beta-gd20cd11bd7" />
+    <PackageReference Include="Refit" Version="6.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrismApp1.Common\PrismApp1.Common.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\MauiDevDetail.xaml.cs">
+      <DependentUpon>MauiDevDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MauiDevDetailPage.xaml.cs">
+      <DependentUpon>MauiDevDetailPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\MauiInfluencers.xaml.cs">
+      <DependentUpon>MauiInfluencers.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>
