@@ -52,10 +52,11 @@
   <Frame HasShadow="True"
          Grid.Row="1"
          Grid.ColumnSpan="2"
-         Padding="15,25"
+         HorizontalOptions="Start"
          Margin="5,20">
     <Label Text="{Binding Influencer.Bio}"
-           LineBreakMode="WordWrap" />
+           LineBreakMode="WordWrap"
+           HorizontalTextAlignment="Start"/>
   </Frame>
 
   <StackLayout HorizontalOptions="Center"

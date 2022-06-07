@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.Maui" Version="8.1.212-beta-gd20cd11bd7" />
+    <PackageReference Include="Prism.Maui" Version="8.1.216-beta" />
   </ItemGroup>
 
 </Project>

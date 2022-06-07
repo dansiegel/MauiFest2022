@@ -24,30 +24,31 @@
            Margin="20, 15"
            VerticalOptions="End" />
     <Frame CornerRadius="15"
-           HasShadow="True"
-           Margin="20,0"
-           MaximumWidthRequest="{OnPlatform 400,WinUI=550}"
-           HorizontalOptions="Fill"
-           VerticalOptions="Center"
-           BackgroundColor="White"
-           Grid.Row="1">
-      <StackLayout Margin="0,10">
+          HasShadow="True"
+          Margin="20,0"
+          MaximumWidthRequest="{OnPlatform 400,WinUI=550}"
+          HorizontalOptions="Fill"
+          VerticalOptions="Center"
+          BackgroundColor="White"
+          Grid.Row="1">
+      <StackLayout Margin="0,10"
+                   HorizontalOptions="Center">
 
         <Button ImageSource="microsoft.png" VerticalOptions="Center"
-                Text="Personal, Company, School"
-                Command="{Binding LoginCommand}"
-                CommandParameter="microsoft" />
+              Text="Personal, Company, School"
+              Command="{Binding LoginCommand}"
+              CommandParameter="microsoft" />
 
         <Button ImageSource="google.png" VerticalOptions="Center"
-                Text="Sign in with Google"
-                Command="{Binding LoginCommand}"
-                CommandParameter="google" />
+              Text="Sign in with Google"
+              Command="{Binding LoginCommand}"
+              CommandParameter="google" />
 
         <Button ImageSource="apple.png" VerticalOptions="Center"
-                Text="Sign in with Apple"
-                Command="{Binding LoginCommand}"
-                CommandParameter="apple"
-                IsVisible="{OnPlatform Default=false,iOS=true,MacCatalyst=true}" />
+              Text="Sign in with Apple"
+              Command="{Binding LoginCommand}"
+              CommandParameter="apple"
+              IsVisible="{OnPlatform Default=false,iOS=true,MacCatalyst=true}" />
 
       </StackLayout>
     </Frame>
