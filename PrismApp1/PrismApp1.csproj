@@ -51,7 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Prism.DryIoc.Maui" Version="8.1.216-beta" />
+    <PackageReference Include="Prism.DryIoc.Maui" Version="8.1.228-beta" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0" />
   </ItemGroup>
 

@@ -12,7 +12,7 @@ Enterprise Support for Prism is additionally available through [AvantiPoint](htt
 
 ## Running the Project
 
-Please note this demo is currently using a CI build of Prism.Maui which is only available for GitHub Sponsors via the [SponsorConnect NuGet Feed](https://sponsorconnect.dev). Some APIs shown in this Demo are not yet publicly available, and will be in the next public release.
+This demo has been updated to use the latest preview of Prism.Maui for .NET MAUI SR1. Due to a known issue with the .NET MAUI Workload if you are running this demo after SR2 has been released you will experience errors. You will need to update to a newer version of Prism.Maui which does not show dependencies on MAUI NuGet packages. The latest build of Prism including Prism.Maui is always available to GitHub Sponsors via the [SponsorConnect NuGet Feed](https://sponsorconnect.dev).
 
 ## Key Concepts
 
