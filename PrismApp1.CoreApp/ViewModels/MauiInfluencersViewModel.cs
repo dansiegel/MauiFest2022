@@ -44,7 +44,7 @@ public class MauiInfluencersViewModel : ViewModelBase
         }
 
         NavigationService.CreateBuilder()
-            .AddNavigationSegment("MauiDevDetail")
+            .AddSegment("MauiDevDetail")
             .AddParameter("influencer", influencer)
             .Navigate();
     }

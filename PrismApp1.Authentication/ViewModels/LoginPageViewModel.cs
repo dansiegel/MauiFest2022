@@ -23,7 +23,7 @@ public class LoginPageViewModel : ViewModelBase
             await Task.Delay(250);
             await NavigationService.CreateBuilder()
                 .UseAbsoluteNavigation()
-                .AddNavigationSegment("Splash")
+                .AddSegment("Splash")
                 .AddParameter("authenticated", true)
                 .NavigateAsync();
         }

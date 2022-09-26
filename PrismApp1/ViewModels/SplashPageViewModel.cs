@@ -29,14 +29,14 @@ internal class SplashPageViewModel : ViewModelBase
             NavigationService.CreateBuilder()
                 .UseAbsoluteNavigation()
                 .AddNavigationPage()
-                .AddNavigationSegment("MainPage")
+                .AddSegment("MainPage")
                 .Navigate();
         }
         else
         {
             NavigationService.CreateBuilder()
                 .UseAbsoluteNavigation()
-                .AddNavigationSegment<LoginPageViewModel>()
+                .AddSegment<LoginPageViewModel>()
                 .Navigate();
         }
     }
